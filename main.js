@@ -88,16 +88,16 @@ function calculateHash(url, salt) {
 }
 
 function clickDownload(e) {
-    showLoader();
+    //showLoader();
     let url = document.getElementById("url").value.trim();
-    let token = document.getElementById("token").value;
+    //let token = document.getElementById("token").value;
     if (url == "https://www.pinterest.com/")
     {
         showAlert("Geçerli bir pin bağlantısı girin, örn:<br> 1. https://pin.it/1HjA5NBMn <br> 2. https://pinterest.com/pin/46181985 <br> Pin bağlantısını bulmak için <a href='#video-download-process'>buraya tıklayın</a>");
     }
     else if (!isEmpty(url) && isValidURL(url)) {
         executed = true;
-        hideAlert();
+        //hideAlert();
         
         document.getElementById("result").style.display = "none";
         
@@ -105,7 +105,7 @@ function clickDownload(e) {
         headers.append("Content-Type", "application/x-www-form-urlencoded");
         let urlencoded = new URLSearchParams();
         urlencoded.append("url", url);
-        urlencoded.append("token", token);
+        //urlencoded.append("token", token);
         urlencoded.append("hash", calculateHash(url, 'aio-dl'));
         let requestOptions = {
             method: 'POST',
