@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
-var siteUrl = WPURLS.siteurl;
+//var siteUrl = WPURLS.siteurl;
 //var translations = LANG_STRINGS;
 var autoFetch = false;
 var executed = false;
@@ -115,7 +115,7 @@ function clickDownload(e) {
         };
         removeHash();
         let statusCode;
-        fetch(siteUrl + "/wp-json/aio-dl/video-data/", requestOptions)
+        fetch("https://indirpin.com.tr/wp-json/aio-dl/video-data/", requestOptions)
             .then(response => 
             {
                 if (response.status === 403) 
