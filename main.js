@@ -105,7 +105,7 @@ function clickDownload(e) {
         headers.append("Content-Type", "application/x-www-form-urlencoded");
         let urlencoded = new URLSearchParams();
         urlencoded.append("url", url);
-        //urlencoded.append("token", token);
+        urlencoded.append("token", "d44637e5c4a255a107ba209417443b87e77c6cf0917d36afc01d870d25875b1a");
         urlencoded.append("hash", calculateHash(url, 'aio-dl'));
         let requestOptions = {
             method: 'POST',
